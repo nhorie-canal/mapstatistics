@@ -20,7 +20,7 @@ class WorkerListView(TemplateView):
         workers = Worker.objects.all()  # データベースからオブジェクトを取得して
         context['workers'] = workers  # 入れ物に入れる
 
-        with open("./static/manager/csv/map_001_22.csv", 'r') as f:
+        with open("../static/manager/csv/map_001_22.csv", 'r') as f:
             reader = csv.reader(f)
 
             list = []
