@@ -2,12 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView
 
 from map1.models import *
-import map1.csv as csv_data
 import csv
 from operator import itemgetter
 import numpy as np
 import logging
-
+from mapstatistics.settings import BASE_DIR
 
 
 class WorkerListView(TemplateView):
@@ -19,8 +18,7 @@ class WorkerListView(TemplateView):
 
         workers = Worker.objects.all()  # データベースからオブジェクトを取得して
         context['workers'] = workers  # 入れ物に入れる
-
-        with open("./map1/csv/map_001_22.csv", 'r') as f:
+        with open(BASE_DIR + "/map1/csv/map_001_22.csv", 'r') as f:
             reader = csv.reader(f)
 
             list = []
