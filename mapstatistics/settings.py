@@ -118,12 +118,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Static file settings
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
-
-
 # Pythonanywhere用の設定を追加
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com']
