@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 import map1.views as map1_view
+import map2.views as map2_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('map1/', map1_view.WorkerListView.as_view()),
+    path('map2/', map2_view.WorkerListView2.as_view()),
 ]
