@@ -10,7 +10,7 @@ from mapstatistics.settings import BASE_DIR
 
 
 class WorkerListView(TemplateView):
-    template_name = "body.html"
+    template_name = BASE_DIR + "/map1/templates/body.html"
 
     def get(self, request, *args, **kwargs):
         logger = logging.getLogger(__name__)

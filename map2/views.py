@@ -9,7 +9,7 @@ import logging
 
 
 class WorkerListView2(TemplateView):
-    template_name = "body.html"
+    template_name = BASE_DIR + "/map2/templates/body.html"
 
     def get(self, request, *args, **kwargs):
         logger = logging.getLogger(__name__)
